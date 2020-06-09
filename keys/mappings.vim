@@ -1,3 +1,7 @@
+
+let mapleader = " "
+"nnoremap <Space> <Nop>
+
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -22,12 +26,33 @@ nmap <leader>vtm :highlight Pmenu ctermbg=gray guibg=gray
 vnoremap X "_d
 inoremap <C-c> <esc>
 
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
+" TAB key
+" Better nav for omnicomplete
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
 
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" I hate escape more than anything else
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+" Easy CAPS
+" inoremap <c-u> <ESC>viwUi
+" nnoremap <c-u> viwU<Esc>
+
+" TAB in general mode will move to text buffer
+nnoremap <silent> <TAB> :bnext<CR>
+" SHIFT-TAB will go back
+nnoremap <silent> <S-TAB> :bprevious<CR>
+
+" Alternate way to save
+nnoremap <silent> <C-s> :w<CR>
+" Alternate way to quit
+nnoremap <silent> <C-Q> :wq!<CR>
+" Use control-c instead of escape
+nnoremap <silent> <C-c> <Esc>
+" <TAB>: completion.
+inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
 inoremap <silent><expr> <C-space> coc#refresh()
 
 " GoTo code navigation.
@@ -78,7 +103,6 @@ if executable('rg')
 endif
 
 let loaded_matchparen = 1
-let mapleader = " "
 
 let g:netrw_browse_split = 2
 let g:vrfr_rg = 'true'

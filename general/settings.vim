@@ -26,7 +26,7 @@ set cursorline                          " Enable highlighting of the current lin
 set t_Co=256                            " Support 256 colors
 set mouse=a                             " Enable your mouse
 set guifont=Hack\ Nerd\ Font
-
+set ic
 
 " Give more space for displaying messages.
 set cmdheight=2
