@@ -68,9 +68,18 @@ nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart
 
 " Sweet Sweet FuGITive
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
-nmap <leader>gs :G<CR>
+nmap <leader>ga :G add .<CR>                  " Git Status
+nmap <leader>gA :G add %<CR>                  " Git Status
+nmap <leader>gs :G<CR>                  " Git Status
+nmap <leader>gj :diffget //3<CR>        "Merge from left
+nmap <leader>gf :diffget //2<CR>        "Merge from right
+nmap <leader>gb :G blame<CR>            "Git Blame
+nmap <leader>gl :G log<CR>              "Git log
+nmap <leader>gd :G diff<CR>             "Git Diff
+nmap <leader>gD :Gdiffsplit<CR>         "Git Split Diff
+nmap <leader>gc :G commit<CR>           "Git Commit
+"nmap <leader>gp :G push<CR>            "Git Push
+"nmap <leader>gP :G pull<CR>            "Git Pull
 
 " Disable the arrow keys in all modes
 " Remove newbie crutches in Command Mode
