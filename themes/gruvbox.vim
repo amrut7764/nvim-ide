@@ -1,5 +1,5 @@
 let g:airline_theme='gruvbox'
-let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_contrast_dark='dark'
 let g:gruvbox_italicize_strings=1
 let g:gruvbox_italic=1
 let g:gruvbox_invert_indent_guides=1

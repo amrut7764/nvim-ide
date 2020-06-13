@@ -21,6 +21,7 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'vim-airline/vim-airline'
 Plug 'flazz/vim-colorschemes'
 Plug 'ThePrimeagen/vim-be-good'
+Plug 'yggdroot/indentline'
 
 call plug#end()
 
